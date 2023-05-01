@@ -1,0 +1,90 @@
+@import "variable.scss";
+@import "attribution.scss";
+*{  padding: 0;
+    margin: 0; 
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background: $background;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:350px;
+        background: $color-white;
+        z-index:1;
+        border-radius: 10px;
+        
+        .preview{
+         width: 350px;
+            img{
+                border-radius: 10px 10px 0 0;
+                width: 100%;
+            }
+        }
+        .content{
+            display: flex;
+            width: 90%;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            .description-product{
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                font-size: 14px;
+                color: $paragraph;
+            }
+            .product-title{
+                font-family: 'Fraunces', serif;
+                color: $color-secondary;
+                margin: 15px 0;
+            }
+            .description{
+                color: $paragraph;
+                line-height: 25px;
+                margin: 0 0 20px 0;
+            }
+            .price-inline{
+                display: flex;
+                align-items: center;
+                
+                .discount-price{
+                    color: $color-primary;
+                    font-family: 'Fraunces', serif;
+                    font-size: 38px;
+                }
+                .price{
+                    color: $paragraph;
+                    font-size: 14px;
+                    margin-left: 15px;
+                }
+            }
+            .btn{
+                border:0;
+                position: relative;
+                background: $color-primary;
+                color: $color-white;
+                padding: 18px;
+                border-radius: 10px;
+                margin-top: 15px;
+
+            }
+            .btn::before{
+                content: " ";
+                background:url(../images/icon-cart.svg);
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                left:90px;
+            }
+        }   
+    }
+}

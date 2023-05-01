@@ -1,0 +1,15 @@
+footer{
+    display: flex;
+    justify-content: center;
+    .attribution { 
+        
+        position: fixed;
+        bottom: 0;
+        font-size: 12px;
+        text-align: center;
+        
+        a {
+             color: hsl(228, 45%, 44%);
+        }
+        }
+}
